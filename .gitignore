@@ -8,5 +8,4 @@ __pycache__/
 *.pyd
 *.pt
 .DS_Store
-data
 outputs
