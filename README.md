@@ -30,12 +30,12 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-4. Run the Notebook `dsc_defensie_assessment.ipynb`
+4. Run the Notebook `dsc_defensie_assessment.ipynb` and install kernel
 
 
 5. Start API from within project ROOT:
 ```sh
-docker build -t shipdetector-api:lastest .
+docker build -t shipdetector-api:latest .
 docker run --rm -p 8000:8000 -e MODEL_PATH="models/yolo11n-seg.pt" shipdetector-api:latest
 ```
 6. Try it out: upload image and see mask or contour results: http://localhost:8000/docs
