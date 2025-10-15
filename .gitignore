@@ -1,0 +1,12 @@
+.venv
+.env
+/venv
+.vscode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pt
+.DS_Store
+data
+outputs
