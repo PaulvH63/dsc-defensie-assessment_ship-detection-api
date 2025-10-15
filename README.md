@@ -11,34 +11,38 @@
 
 ## Run Notebook (dev)
 1. Create a virtual environment and install dependencies
-```sh
-python3 -m venv venv-shipdetector
-```
+    ```sh
+    python3 -m venv venv-shipdetector
+    ```
 
 2. Activate environment (or select environment in VSCode to run Jupyter Notebook)
-```sh
-# macOS / Linux
-source venv-shipdetector/bin/activate
+    ```sh
+    # macOS / Linux
+    source venv-shipdetector/bin/activate
 
-# Windows
-venv-shipdetector\Scripts\activate
-```
+    # Windows
+    venv-shipdetector\Scripts\activate
+    ```
 
 3. Install dependencies into environment
-```sh
-pip install --upgrade pip
-pip install -r requirements.txt
-```
+    ```sh
+    pip install --upgrade pip
+    pip install -r requirements.txt
+    ```
 
 4. Run the Notebook `dsc_defensie_assessment.ipynb` and install kernel
 
 
 ## Start API
+1. Install Docker 🐳
+
+    [Get Docker](https://docs.docker.com/get-docker/)
+
 1. Start API from within project ROOT:
-```sh
-docker build -t shipdetector-api:latest .
-docker run --rm -p 8000:8000 -e MODEL_PATH="models/yolo11n-seg.pt" shipdetector-api:latest
-```
+    ```sh
+    docker build -t shipdetector-api:latest .
+    docker run --rm -p 8000:8000 -e MODEL_PATH="models/yolo11n-seg.pt" shipdetector-api:latest
+    ```
 2. **Try out** both endpoints: `/image/mask` `/image/contour`
     1. Open http://localhost:8000/docs
     2. Open either of the 2 endpoints
@@ -50,7 +54,7 @@ docker run --rm -p 8000:8000 -e MODEL_PATH="models/yolo11n-seg.pt" shipdetector-
 
 
 ## UI Example 
-*training set image*: 0006c52e8.jpg
+*API response using training set image*: **0006c52e8.jpg**
 
 <img src="./docs/images/api_overview.png" alt="UI overview" width="500">
 
